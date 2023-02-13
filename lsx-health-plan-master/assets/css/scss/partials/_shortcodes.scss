@@ -1,0 +1,585 @@
+.slick-slider {
+	.slick-dots {
+		align-items: center;
+		display: flex;
+		flex-flow: row wrap;
+		height: auto;
+		justify-content: center;
+		list-style: none;
+		margin: 1rem 0 0;
+		padding: 0;
+
+		& > li {
+			line-height: 1;
+			padding: 5px;
+
+			@include media('>=tablet') {
+				padding: 0 7.5px;
+			}
+
+			& > button {
+				background: transparent;
+				border-style: solid;
+				border-width: 1px;
+				font: 0/0 a;
+				height: 12px;
+				transition: all 300ms ease-in-out;
+				width: 4rem;
+
+				@include media('>=tablet') {
+					height: 6px;
+				}
+			}
+		}
+	}
+
+	.slick-arrow {
+		background: transparent;
+		border-radius: 50%;
+		border-style: solid;
+		border-width: 2px;
+		font: 0/0 a;
+		height: 4rem;
+		margin-top: calc((2rem - 17px) / 2);
+		opacity: 1;
+		padding: 0;
+		position: absolute;
+		text-shadow: none;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: border 300ms ease;
+		width: 4rem;
+		z-index: 3;
+
+		&:before {
+			display: block;
+			font-family: 'FontAwesome';
+			font-size: 3rem;
+			line-height: 1;
+			position: absolute;
+			text-rendering: auto;
+			top: 47%;
+			transform: translateY(-50%);
+			transition: color 300ms ease;
+
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		&.slick-disabled {
+			cursor: not-allowed;
+		}
+
+		&.slick-prev {
+			left: -4rem;
+
+			&:before {
+				content: '\f104';
+				left: 1.1rem;
+			}
+		}
+
+		&.slick-next {
+			right: -4rem;
+
+			&:before {
+				content: '\f105';
+				left: 1.5rem;
+			}
+		}
+	}
+}
+
+#lsx-videos-shortcode,
+#lsx-recipes-shortcode {
+	background: $white;
+	padding: 30px 15px;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20x;
+	h2 {
+		width: 100%;
+	}
+	.lsx-videos-title,
+	.lsx-recipes-title {
+		font-size: 20px;
+		font-family: 'Noto Sans', sans-serif;
+	}
+}
+
+.single-recipe {
+	.content-area,
+	.widget-area {
+		@media (max-width: 768px) {
+			margin-top: 8.5rem;
+		}
+	}
+}
+#lsx-recipes-shortcode {
+	.lsx-recipes-shortcode {
+		@media (min-width: 900px) {
+			width: 100%;
+		}
+		table {
+			tr {
+				th {
+					font-weight: 300;
+				}
+			}
+		}
+		.col-md-7 {
+			@media (max-width: 767px) {
+				img {
+					margin-top: 2em;
+				}
+			}
+		}
+	}
+}
+
+.slick-slider {
+	@media (max-width: 782px) {
+		width: 100%;
+	}
+	@media (max-width: 400px) {
+		width: 97%;
+	}
+	button.slick-arrow {
+		border-color: $gray;
+		color: $gray;
+		&.slick-prev {
+			left: -7rem;
+		}
+		&.slick-next {
+			right: -7rem;
+		}
+	}
+	.slick-dots {
+		> li {
+			> button {
+				border-color: $gray;
+			}
+		}
+		> li.slick-active {
+			> button {
+				background-color: $gray;
+			}
+		}
+	}
+	.lsx-videos-slot {
+		iframe {
+			width: 100%;
+			max-height: 300px;
+			@media (max-width: 400px) {
+				max-height: 150px;
+			}
+		}
+	}
+}
+
+#lsx-tips-shortcode {
+	margin-top: 3rem;
+	justify-content: flex-end;
+	background: white;
+	box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.24);
+	@include media('>=tablet') {
+		width: 380px;
+		min-width: 350px;
+	}
+	.lsx-tips-shortcode {
+		width: 100%;
+		.diet-tip-wrapper {
+			.col-xs-2 {
+				padding: 0;
+				svg {
+					width: 30px;
+				}
+			}
+			.col-xs-10 {
+				padding-left: 5px;
+			}
+			&.quick-tip {
+				margin: 0;
+				background: white;
+				padding: 1rem 2rem;
+				.row {
+					margin: 0;
+				}
+				h3 {
+					color: $gray;
+					font-family: 'Noto Sans';
+					font-size: 15px;
+					font-weight: bold;
+					margin-bottom: 5px;
+				}
+				p {
+					color: #919191;
+					font-size: 13px;
+					margin: 0;
+				}
+			}
+		}
+		&.slick-slider {
+			button {
+				&.slick-arrow {
+					border: none;
+					color: #dddddd;
+					&.slick-next {
+						right: -1rem;
+					}
+					&.slick-prev {
+						left: 0;
+					}
+				}
+			}
+			.slick-dots {
+				margin-top: 0;
+				margin-bottom: 8px;
+				> li {
+					padding: 0 3px;
+					> button {
+						border-color: #dddddd;
+						width: 9px;
+						height: 9px;
+						border-radius: 50%;
+						padding: 0;
+						background: #dddddd;
+					}
+					&.slick-active {
+						> button {
+							background: #919191;
+						}
+					}
+				}
+			}
+		}
+	}
+	body.single & {
+		margin-bottom: 2rem;
+	}
+}
+
+.lsx-hp-widget-items {
+	&.slick-slider {
+		background-color: white;
+		padding: 2rem;
+		button.slick-arrow {
+			border: none;
+			&.slick-next {
+				right: 1rem;
+			}
+			&.slick-prev {
+				left: 1rem;
+			}
+		}
+		.slick-dots {
+			border-bottom: 1px solid #dddddd;
+			padding-bottom: 3rem;
+		}
+	}
+}
+.widget-item-grid-layout {
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0;
+		justify-content: center;
+		@include media('>=tablet') {
+			padding: 1rem;
+		}
+		> .col-xs-12 {
+			padding: 1rem;
+			img {
+				width: 100%;
+			}
+			&:not(:first-child) {
+				flex: 1;
+				img {
+					height: 100%;
+					max-height: 230px;
+					object-fit: cover;
+				}
+			}
+		}
+		&:first-child {
+			> .col-xs-12 {
+				&:first-child {
+					width: 100%;
+					img {
+						max-height: 320px;
+						object-fit: cover;
+					}
+				}
+				&:only-child {
+					padding: 0;
+					margin: -1rem;
+					@include media('>=tablet') {
+						width: 490px;
+					}
+				}
+			}
+		}
+		&:not(:first-child) {
+			justify-content: left;
+			padding-top: 0;
+			> .col-sm-4 {
+				width: 50%;
+			}
+			> .col-sm-3 {
+				width: 33.33%;
+			}
+		}
+	}
+}
+
+#lsx-exercises-shortcode {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	.lsx-exercises-shortcode {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		> .col-xs-12 {
+			margin-bottom: 3rem;
+			&:first-child {
+				&:last-child {
+					width: 100%;
+				}
+			}
+		}
+		&.layout-grid {
+			@include media('>=tablet') {
+				display: grid;
+				column-gap: 1rem;
+				row-gap: 1rem;
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		}
+		.has-content-none {
+			.exercise-content-box {
+				.title-lined {
+					border-bottom: none;
+				}
+			}
+		}
+		.lsx-slot {
+			.exercise-feature-img {
+				img {
+					width: 100%;
+				}
+			}
+			.exercise-content-box {
+				.title-lined {
+					margin-bottom: 10px;
+					&.no-excerpt {
+						border: none;
+					}
+					.exercise-table {
+						margin: 0;
+					}
+				}
+				.moretag {
+					display: none;
+				}
+				.border-btn {
+					width: 100%;
+				}
+			}
+		}
+		.lsx-exercises-item {
+			min-height: 200px;
+			background-position: center;
+			background-repeat: no-repeat;
+			display: flex;
+			position: relative;
+			a[data-toggle='modal'] {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
+			&.bg-full {
+				background-size: cover;
+			}
+			@include media('<tablet') {
+				margin-bottom: 1rem;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: linear-gradient(120deg, $blue, $blue);
+				opacity: 0.4;
+				transition: opacity 0.1s ease-in;
+			}
+			&:hover {
+				&:before {
+					content: '\f05d';
+					font-family: FontAwesome;
+					color: rgba(255, 255, 255, 0.6);
+					font-size: 6em;
+					opacity: 1;
+					display: flex;
+					align-items: baseline;
+					justify-content: center;
+				}
+			}
+			.exercise-link {
+				display: flex;
+				align-items: flex-end;
+				position: relative;
+				padding: 1rem 2rem;
+				width: 100%;
+				&.excerpt-excerpt,
+				&.excerpt-full {
+					display: flex;
+					flex-direction: column;
+					align-items: end;
+					justify-content: flex-end;
+				}
+				.lsx-exercises-title {
+					color: white;
+					text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+					max-width: 80%;
+					margin-left: 0;
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+	&.columns-2 {
+		.lsx-exercises-shortcode {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	&.columns-4 {
+		.lsx-exercises-shortcode {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	&.columns-5 {
+		.lsx-exercises-shortcode {
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+	&.columns-6 {
+		.lsx-exercises-shortcode {
+			grid-template-columns: repeat(6, 1fr);
+		}
+	}
+	> .col-md-12 {
+		margin: 2rem auto;
+		text-align: center;
+		@include media('<tablet') {
+			width: 100%;
+			padding: 0;
+			.btn {
+				width: 100%;
+			}
+		}
+	}
+}
+
+#lsx-hp-related {
+	.lsx-related-posts {
+		&.lsx-related-posts-title {
+			.col-xs-12 {
+				text-align: center;
+				h2 {
+					font-weight: bold;
+				}
+			}
+		}
+		&.lsx-related-posts-content {
+			.col-xs-12 {
+				.lsx-related-posts-wrapper {
+					align-items: flex-start;
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: flex-start;
+					margin-left: -15px;
+					margin-right: -15px;
+					.lsx-slot {
+						width: 100%;
+						padding-left: 15px;
+						padding-right: 15px;
+						@include media('>tablet') {
+							width: 33.33%;
+							margin: 0;
+						}
+						.entry-layout {
+							.entry-layout-content {
+								.entry-header {
+									.entry-image {
+										img {
+											width: 100%;
+											max-height: 170px;
+											object-fit: cover;
+										}
+									}
+									.entry-meta {
+										padding: 15px 15px 0 15px;
+										.post-categories {
+											a {
+												font-size: 13px;
+											}
+										}
+									}
+									.entry-title {
+										padding: 10px 15px;
+										margin: 0;
+										line-height: 22px;
+										a {
+											font-size: 18px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	body.single-plan &,
+	body.single-workout &,
+	body.single-meal & {
+		margin-top: 4.25rem;
+		.lsx-related-posts {
+			&.lsx-related-posts-title {
+				.col-xs-12 {
+					text-align: left;
+					.lsx-related-posts-headline {
+						font-size: 22px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#hp-connected-members {
+	display: flex;
+	margin-bottom: 1rem;
+	p {
+		margin-right: 3rem;
+		margin-bottom: 1rem;
+		line-height: 6px;
+		@include media('<=tablet') {
+			margin-top: 3rem;
+		}
+		.lsx-team-roles {
+			text-transform: uppercase;
+			font-size: 13px;
+		}
+		.lsx-team-name {
+			font-size: 13px;
+		}
+	}
+	body.single-meal & {
+		padding: 0 20px;
+	}
+}
